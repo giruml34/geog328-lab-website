@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>My GEOG 482 Site</title>
+  <title>YourSite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="assets/styles.css" rel="stylesheet">
 </head>
@@ -10,7 +10,7 @@
 
 <header class="site-header">
   <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html">My Lab Site</a>
+    <a class="brand" href="index.html">YourSite</a>
 
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -18,66 +18,33 @@
 
     <ul id="primary-nav" class="nav-links">
       <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="about.html">Lab 1 → Site</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About / Lab 1</a></li>
+      <li><a href="resources.html">Resources</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-
-  <!-- Fullscreen hero video -->
+  <!-- HERO: shows a video if present; otherwise falls back to a gradient -->
   <section class="video-bg" aria-label="Intro">
-    <video class="bg-video" autoplay muted loop playsinline poster="assets/media/images/sample.jpg">
+    <!-- If you don't have a video yet, keep this <video> but it will hide behind the gradient.
+         Add files at assets/media/hero.webm and hero.mp4 when ready. -->
+    <video class="bg-video" autoplay muted loop playsinline poster="assets/media/images/hero-poster.jpg">
       <source src="assets/media/hero.webm" type="video/webm">
       <source src="assets/media/hero.mp4" type="video/mp4">
-      <!-- If video can't play, the poster image will show -->
     </video>
 
     <div class="overlay-content">
-      <h1>Welcome to My GEOG 482 Website</h1>
-      <p>I converted my Lab 1 wiki into a responsive site with a UW-themed nav and custom components.</p>
-      <a class="overlay-btn" href="about.html">See the Conversion</a>
+      <h1>Welcome!</h1>
+      <p>A responsive site converted from my Lab 1 wiki.</p>
+      <a class="overlay-btn" href="#more">Learn More</a>
     </div>
   </section>
 
-  <section class="container prose">
-    <h2>Quick Summary (from my wiki)</h2>
-    <p>Here’s a concise overview of the topic with a simple table.</p>
-
-    <!-- Summary table (custom element #1) -->
-    <table>
-      <thead>
-        <tr>
-          <th>Section</th>
-          <th>Key Idea</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Background</td>
-          <td>Context & definitions</td>
-          <td>Adapted from Lab 1 wiki</td>
-        </tr>
-        <tr>
-          <td>Methods</td>
-          <td>Tools & workflow</td>
-          <td>HTML/CSS/JS + GitHub Pages</td>
-        </tr>
-        <tr>
-          <td>Media</td>
-          <td>Video & images</td>
-          <td>Optimized sizes for web</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>Sample Image (multimedia)</h2>
-    <p>All images are responsive and won’t overflow the page.</p>
-    <img src="assets/media/images/sample.jpg" alt="Sample illustrative image">
+  <section id="more" class="container prose" style="min-height:50vh">
+    <h2>Overview</h2>
+    <p>Replace this with a short summary pulled from your Lab 1 wiki.</p>
   </section>
-
 </main>
 
 <footer class="site-footer">
