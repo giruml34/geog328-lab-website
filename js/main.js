@@ -1,13 +1,26 @@
-// Toggle mobile nav
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('navLinks');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.getElementById('navLinks');
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+    navToggle.setAttribute('aria-expanded', !expanded);
+    navLinks.classList.toggle('open');
   });
 }
 
-// Auto-set year in footer
-document.getElementById('year')?.append(new Date().getFullYear());
+const backBtn = document.getElementById('backTop');
+if (backBtn) {
+  window.addEventListener('scroll', () => {
+    backBtn.style.display = window.scrollY > 300 ? 'inline-block' : 'none';
+  });
+
+  backBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
