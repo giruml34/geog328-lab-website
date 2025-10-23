@@ -67,3 +67,53 @@ html, body {
   filter: brightness(0.95);
   transform: translateY(-2px);
 }
+/* Video background section */
+.video-bg {
+  position: relative;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6); /* darkens for text readability */
+}
+
+.overlay-content {
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.overlay-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-btn {
+  background-color: #b7a57a;
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.overlay-btn:hover {
+  background-color: #a48e63;
+}
