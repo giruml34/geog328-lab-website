@@ -8,12 +8,10 @@
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <!-- Header / Navbar -->
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="index.html">YourSite</a>
 
-      <!-- Hamburger -->
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
@@ -26,15 +24,17 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Welcome</h1>
-    <p>This is your starter homepage. Once this loads, we’ll plug in your Lab 1 content next.</p>
-  </main>
+ <main class="container">
+  <section class="video-bg">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Your Name · Built for GEOG lab</p>
+    <div class="overlay-content">
+      <h1>Welcome to My Web GIS Wiki</h1>
+      <p>Learning how to use GitHub, HTML, and Web GIS concepts.</p>
+      <a href="about.html" class="overlay-btn">Learn More</a>
     </div>
-  </footer>
-</body>
-</html>
+  </section>
+</main>
