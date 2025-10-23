@@ -8,6 +8,7 @@
   --text: #111;
   --bg: #ffffff;
   --container-max: 1100px;  /* tweak to fit your nav width */
+  --header-h: 56px;         /* used for mobile menu offset */
 }
 
 /* =========================
@@ -23,6 +24,8 @@ html, body {
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
+body { overflow-x: hidden; } /* avoid rare 100vw horizontal scroll */
+
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -32,6 +35,18 @@ html, body {
 /* Optional nice spacing for main headings/content blocks */
 h1 { margin: .25rem 0 1rem; line-height: 1.2; }
 h2 { margin: 1.25rem 0 .5rem; line-height: 1.25; }
+
+/* Focus outlines for a11y */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--nav-active);
+  outline-offset: 2px;
+}
+
+/* Reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
 
 /* =========================
    HEADER / NAV
@@ -50,6 +65,7 @@ h2 { margin: 1.25rem 0 .5rem; line-height: 1.25; }
   max-width: var(--container-max);
   margin: 0 auto;
   padding: .75rem 1rem;
+  min-height: var(--header-h);
 }
 
 .brand {
@@ -97,7 +113,7 @@ h2 { margin: 1.25rem 0 .5rem; line-height: 1.25; }
   .nav-toggle { display: block; }
   .nav-links {
     position: absolute;
-    top: 56px;          /* height of header area */
+    top: var(--header-h);
     right: 0;
     left: 0;
     background: var(--nav-bg);
@@ -221,3 +237,4 @@ tbody td {
   transition: filter .2s ease, background-color .2s ease;
 }
 .overlay-btn:hover{ filter: brightness(.95); }
+
