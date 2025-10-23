@@ -1,83 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About / Lab 1</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <script defer src="js/main.js"></script>
+  <meta charset="utf-8">
+  <title>Lab 1 → Website Conversion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/styles.css" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">YourSite</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="about.html">About / Lab 1</a></li>
-        <li><a href="resources.html">Resources</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="container prose">
-    <h1>Welcome to My Web GIS Wiki</h1>
-
-    <h2>About Me</h2>
-    <p>Hi! I'm <strong>Girum Wanoro</strong>, and this is my first GitHub Pages site for GEOG 328: Web GIS.
-    I'm learning how to use Git, GitHub, and Markdown to create and publish web content.</p>
-
-    <h2>What I’m Learning</h2>
-<div class="card-grid">
-  <article class="card"><h3>Git &amp; GitHub</h3><p>Version control & collaboration.</p></article>
-  <article class="card"><h3>Markdown</h3><p>Clean docs for the web.</p></article>
-  <article class="card"><h3>Web GIS</h3><p>Maps + data on the web.</p></article>
-  <article class="card"><h3>Publishing</h3><p>Deploying with GitHub Pages.</p></article>
-</div>
-
-    <h2>Useful Links</h2>
-    <ul>
-      <li><a href="https://www.washington.edu" target="_blank" rel="noopener">University of Washington</a></li>
-      <li><a href="https://guides.github.com/" target="_blank" rel="noopener">GitHub Guides</a></li>
-      <li><a href="https://github.com/jakobzhao/geog328" target="_blank" rel="noopener">My Course Repository</a></li>
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="index.html">My Lab Site</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="primary-nav" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="about.html">Lab 1 → Site</a></li>
+      <li><a href="projects.html">Projects</a></li>
     </ul>
+  </nav>
+</header>
 
-    <section>
-  <h2>Summary Table</h2>
-  <table class="summary">
-    <thead>
-      <tr><th>Theme</th><th>Description</th><th>Example</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Placemaking</td><td>How people shape public space.</td><td>Community gardens</td></tr>
-      <tr><td>Cultural Practices</td><td>Shared activities and events.</td><td>Street festivals</td></tr>
-      <tr><td>Representation</td><td>Whose stories get shown.</td><td>Local murals</td></tr>
-    </tbody>
-  </table>
-</section>
+<main class="container prose">
+  <h1>Converting My Lab 1 Wiki</h1>
+  <p>Paste/clean up your Lab 1 markdown content here as HTML paragraphs, lists, and images. You can also add a collapsible FAQ or cards if you want more custom elements.</p>
+</main>
 
-
-    <h2>Image Example</h2>
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Seattle_skyline_from_Kerry_Park_2021.jpg" alt="Seattle skyline from Kerry Park">
-      <figcaption>Seattle Skyline (Wikimedia Commons)</figcaption>
-    </figure>
-
-    <h2>Fun Facts</h2>
-    <ol>
-      <li>I play soccer in my free time.</li>
-      <li>I enjoy learning about maps and data.</li>
-      <li>I’m currently exploring how technology can connect communities.</li>
-    </ol>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Girum Wanoro</p>
-    </div>
-  </footer>
- <button id="backTop" aria-label="Back to top">↑ Back to top</button>
+<footer class="site-footer">
+  <div class="container"><small>© <span id="year"></span> Your Name • GEOG 482</small></div>
+</footer>
+<button id="backTop" aria-label="Back to top">↑ Top</button>
+<script src="assets/script.js"></script>
 </body>
 </html>
