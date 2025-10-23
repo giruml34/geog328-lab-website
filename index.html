@@ -1,96 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | GEOG 328 Web GIS</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <script defer src="js/main.js"></script>
+  <meta charset="utf-8">
+  <title>My GEOG 482 Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/styles.css" rel="stylesheet">
 </head>
-
 <body>
-  <!-- ===== NAVIGATION BAR ===== -->
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">YourSite</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About / Lab 1</a></li>
-        <li><a href="resources.html">Resources</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- ===== VIDEO BACKGROUND HERO ===== -->
-  <section class="video-bg">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="index.html">My Lab Site</a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <ul id="primary-nav" class="nav-links">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about.html">Lab 1 → Site</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Fullscreen hero video -->
+  <section class="video-bg" aria-label="Intro">
+    <video class="bg-video" autoplay muted loop playsinline poster="assets/media/images/sample.jpg">
+      <source src="assets/media/hero.webm" type="video/webm">
+      <source src="assets/media/hero.mp4" type="video/mp4">
+      <!-- If video can't play, the poster image will show -->
     </video>
 
     <div class="overlay-content">
-      <h1>Welcome to My Web GIS Wiki</h1>
-      <p>Exploring maps, data, and digital geography — built for GEOG 328.</p>
-      <a href="about.html" class="overlay-btn">Learn More</a>
+      <h1>Welcome to My GEOG 482 Website</h1>
+      <p>I converted my Lab 1 wiki into a responsive site with a UW-themed nav and custom components.</p>
+      <a class="overlay-btn" href="about.html">See the Conversion</a>
     </div>
   </section>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="container prose">
-    <h2>About This Site</h2>
-    <p>
-      This is my first GitHub Pages website for <strong>GEOG 328: Web GIS</strong>.  
-      I’m learning how to use <strong>Git</strong>, <strong>GitHub</strong>, and <strong>HTML/CSS</strong>  
-      to publish geospatial content and interactive web maps.
-    </p>
+  <section class="container prose">
+    <h2>Quick Summary (from my wiki)</h2>
+    <p>Here’s a concise overview of the topic with a simple table.</p>
 
-    <h2>Topics I’m Learning</h2>
+    <!-- Summary table (custom element #1) -->
     <table>
       <thead>
         <tr>
-          <th>Concept</th>
-          <th>Description</th>
-          <th>Example</th>
+          <th>Section</th>
+          <th>Key Idea</th>
+          <th>Notes</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Placemaking</td>
-          <td>How people shape public space</td>
-          <td>Community gardens</td>
+          <td>Background</td>
+          <td>Context & definitions</td>
+          <td>Adapted from Lab 1 wiki</td>
         </tr>
         <tr>
-          <td>Cultural Practices</td>
-          <td>Shared cultural activities and events</td>
-          <td>Street festivals</td>
+          <td>Methods</td>
+          <td>Tools & workflow</td>
+          <td>HTML/CSS/JS + GitHub Pages</td>
         </tr>
         <tr>
-          <td>Representation</td>
-          <td>Whose stories get shown</td>
-          <td>Local murals and art</td>
+          <td>Media</td>
+          <td>Video & images</td>
+          <td>Optimized sizes for web</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>Media Example</h2>
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Seattle_skyline_from_Kerry_Park_2021.jpg" 
-           alt="Seattle skyline from Kerry Park">
-      <figcaption>Seattle Skyline (Wikimedia Commons)</figcaption>
-    </figure>
-  </main>
+    <h2>Sample Image (multimedia)</h2>
+    <p>All images are responsive and won’t overflow the page.</p>
+    <img src="assets/media/images/sample.jpg" alt="Sample illustrative image">
+  </section>
 
-  <!-- ===== BACK TO TOP BUTTON ===== -->
-  <button id="backTop" aria-label="Back to top">↑ Back to top</button>
+</main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Girum Wanoro · Built for GEOG 328</p>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container">
+    <small>© <span id="year"></span> Your Name • GEOG 482</small>
+  </div>
+</footer>
+
+<button id="backTop" aria-label="Back to top">↑ Top</button>
+
+<script src="assets/script.js"></script>
 </body>
 </html>
