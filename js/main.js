@@ -1,26 +1,27 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.getElementById('navLinks');
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const links = document.querySelector('.nav-links');
 
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-    navToggle.setAttribute('aria-expanded', !expanded);
-    navLinks.classList.toggle('open');
+if (toggle && links){
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 }
 
-const backBtn = document.getElementById('backTop');
-if (backBtn) {
+// Back to top
+const backTop = document.getElementById('backTop');
+if (backTop){
   window.addEventListener('scroll', () => {
-    backBtn.style.display = window.scrollY > 300 ? 'inline-block' : 'none';
+    if (window.scrollY > 400){
+      backTop.style.display = 'inline-block';
+    } else {
+      backTop.style.display = 'none';
+    }
   });
-
-  backBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-const yearSpan = document.getElementById('year');
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
+// Footer year
+const year = document.getElementById('year');
+if (year){ year.textContent = new Date().getFullYear(); }
