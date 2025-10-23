@@ -1,8 +1,8 @@
 :root{
-  --nav-bg: #0b3d91;        /* NAV BAR COLOR */
-  --nav-hover: #133fbd;     /* HOVER COLOR */
-  --nav-active: #f5c542;    /* ACTIVE COLOR */
-  --text: #1a1a1a;
+  --nav-bg: #4b2e83;   
+  --nav-hover: #392265;  
+  --nav-active: #b7a57a;
+  --text: #111;
   --bg: #ffffff;
   --container-max: 1100px;
 }
@@ -15,7 +15,7 @@ html, body {
 }
 .container { max-width: var(--container-max); margin: 0 auto; padding: 1rem; }
 
-/* NAVBAR */
+
 .site-header { position: sticky; top: 0; z-index: 1000; background: var(--nav-bg); }
 .nav { display: flex; align-items: center; justify-content: space-between; max-width: var(--container-max); margin: 0 auto; padding: .75rem 1rem; }
 .brand { color: #fff; text-decoration: none; font-weight: 700; }
@@ -24,11 +24,11 @@ html, body {
 .nav-links a:hover { background: var(--nav-hover); }
 .nav-links a.active { background: var(--nav-active); color: #111; }
 
-/* Hamburger */
+
 .nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; }
 .nav-toggle .bar { display: block; width: 24px; height: 3px; background: #fff; margin: 4px 0; border-radius: 2px; }
 
-/* Mobile menu */
+
 @media (max-width: 820px){
   .nav-toggle { display: block; }
   .nav-links {
@@ -42,7 +42,7 @@ html, body {
   .nav-links a { display: block; padding: 1rem; }
 }
 
-/* Footer + prose */
+
 .site-footer { border-top: 1px solid #eee; margin-top: 2rem; }
 .site-footer .container { padding: 1.25rem; text-align: center; }
 .prose img { max-width: 100%; height: auto; border-radius: 8px; }
