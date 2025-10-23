@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GEOG Lab Website – Home</title>
+  <title>Home | GEOG 328 Web GIS</title>
   <link rel="stylesheet" href="css/main.css" />
   <script defer src="js/main.js"></script>
 </head>
+
 <body>
+  <!-- ===== NAVIGATION BAR ===== -->
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="index.html">YourSite</a>
-
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
-
       <ul class="nav-links" id="navLinks">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="about.html">About / Lab 1</a></li>
@@ -24,17 +24,73 @@
     </nav>
   </header>
 
- <main class="container">
+  <!-- ===== VIDEO BACKGROUND HERO ===== -->
   <section class="video-bg">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
     <div class="overlay-content">
       <h1>Welcome to My Web GIS Wiki</h1>
-      <p>Learning how to use GitHub, HTML, and Web GIS concepts.</p>
+      <p>Exploring maps, data, and digital geography — built for GEOG 328.</p>
       <a href="about.html" class="overlay-btn">Learn More</a>
     </div>
   </section>
-</main>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container prose">
+    <h2>About This Site</h2>
+    <p>
+      This is my first GitHub Pages website for <strong>GEOG 328: Web GIS</strong>.  
+      I’m learning how to use <strong>Git</strong>, <strong>GitHub</strong>, and <strong>HTML/CSS</strong>  
+      to publish geospatial content and interactive web maps.
+    </p>
+
+    <h2>Topics I’m Learning</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Placemaking</td>
+          <td>How people shape public space</td>
+          <td>Community gardens</td>
+        </tr>
+        <tr>
+          <td>Cultural Practices</td>
+          <td>Shared cultural activities and events</td>
+          <td>Street festivals</td>
+        </tr>
+        <tr>
+          <td>Representation</td>
+          <td>Whose stories get shown</td>
+          <td>Local murals and art</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Media Example</h2>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Seattle_skyline_from_Kerry_Park_2021.jpg" 
+           alt="Seattle skyline from Kerry Park">
+      <figcaption>Seattle Skyline (Wikimedia Commons)</figcaption>
+    </figure>
+  </main>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button id="backTop" aria-label="Back to top">↑ Back to top</button>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Girum Wanoro · Built for GEOG 328</p>
+    </div>
+  </footer>
+</body>
+</html>
