@@ -1,53 +1,150 @@
+/* =========================
+   THEME TOKENS
+   ========================= */
 :root{
-  --nav-bg: #4b2e83;   
-  --nav-hover: #392265;  
-  --nav-active: #b7a57a;
+  --nav-bg: #4b2e83;        /* UW Purple */
+  --nav-hover: #392265;
+  --nav-active: #b7a57a;    /* UW Gold */
   --text: #111;
   --bg: #ffffff;
-  --container-max: 1100px;
+  --container-max: 1100px;  /* tweak to fit your nav width */
 }
 
+/* =========================
+   BASE
+   ========================= */
 * { box-sizing: border-box; }
+
 html, body {
-  margin: 0; padding: 0;
-  color: var(--text); background: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background: var(--bg);
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
-.container { max-width: var(--container-max); margin: 0 auto; padding: 1rem; }
 
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 1rem;
+}
 
-.site-header { position: sticky; top: 0; z-index: 1000; background: var(--nav-bg); }
-.nav { display: flex; align-items: center; justify-content: space-between; max-width: var(--container-max); margin: 0 auto; padding: .75rem 1rem; }
-.brand { color: #fff; text-decoration: none; font-weight: 700; }
-.nav-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
-.nav-links a { color: #fff; text-decoration: none; padding: .5rem .75rem; border-radius: .5rem; }
+/* Optional nice spacing for main headings/content blocks */
+h1 { margin: .25rem 0 1rem; line-height: 1.2; }
+h2 { margin: 1.25rem 0 .5rem; line-height: 1.25; }
+
+/* =========================
+   HEADER / NAV
+   ========================= */
+.site-header {
+  position: sticky; /* stays at top when scrolling */
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: .75rem 1rem;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+}
+
 .nav-links a:hover { background: var(--nav-hover); }
 .nav-links a.active { background: var(--nav-active); color: #111; }
 
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.nav-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
 
-.nav-toggle { display: none; background: transparent; border: 0; cursor: pointer; }
-.nav-toggle .bar { display: block; width: 24px; height: 3px; background: #fff; margin: 4px 0; border-radius: 2px; }
-
-
+/* Mobile menu */
 @media (max-width: 820px){
   .nav-toggle { display: block; }
   .nav-links {
-    position: absolute; top: 56px; right: 0; left: 0;
+    position: absolute;
+    top: 56px;          /* height of header area */
+    right: 0;
+    left: 0;
     background: var(--nav-bg);
-    flex-direction: column; gap: 0;
-    transform: translateY(-110%); transition: transform .25s ease;
+    flex-direction: column;
+    gap: 0;
+    transform: translateY(-110%);
+    transition: transform .25s ease;
   }
   .nav-links.open { transform: translateY(0); }
   .nav-links li { border-top: 1px solid rgba(255,255,255,.15); }
   .nav-links a { display: block; padding: 1rem; }
 }
 
-
+/* =========================
+   FOOTER
+   ========================= */
 .site-footer { border-top: 1px solid #eee; margin-top: 2rem; }
 .site-footer .container { padding: 1.25rem; text-align: center; }
+
+/* =========================
+   MEDIA / IMAGES
+   ========================= */
 .prose img { max-width: 100%; height: auto; border-radius: 8px; }
 
+/* =========================
+   TABLES (for your summary table)
+   ========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1px solid #e5e7eb;
+}
+thead th {
+  background: #f8f8fb;
+  text-align: left;
+  padding: .6rem .5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+tbody td {
+  padding: .6rem .5rem;
+  border-top: 1px solid #f0f0f0;
+}
 
+/* =========================
+   BACK TO TOP BUTTON
+   ========================= */
 #backTop {
   position: fixed;
   right: 16px;
@@ -59,7 +156,7 @@ html, body {
   color: #111;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  display: none;
+  display: none;                  /* shown via JS after scroll */
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -67,53 +164,60 @@ html, body {
   filter: brightness(0.95);
   transform: translateY(-2px);
 }
-/* Video background section */
-.video-bg {
+
+/* =========================
+   FULLSCREEN VIDEO HERO (full-bleed)
+   ========================= */
+/* Place this hero inside your .container; these rules stretch it edge-to-edge */
+.video-bg{
   position: relative;
-  height: 100vh; /* full screen height */
+  height: 100vh;               /* full screen height */
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+
+  /* Make hero span the full viewport width even inside .container */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  border-radius: 12px;         /* optional soft corners */
 }
 
-.bg-video {
+.bg-video{
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.6); /* darkens for text readability */
+  filter: brightness(0.6);     /* darken for readable overlay text */
+  z-index: -1;                 /* sit behind overlay */
 }
 
-.overlay-content {
-  color: white;
+.overlay-content{
+  position: relative;
+  color: #fff;
   text-align: center;
-  z-index: 2;
+  padding: 2rem;
 }
 
-.overlay-content h1 {
-  font-size: 3rem;
+.overlay-content h1{
+  font-size: clamp(2rem, 6vw, 3.2rem);
   margin-bottom: 0.5rem;
 }
 
-.overlay-content p {
-  font-size: 1.25rem;
+.overlay-content p{
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   margin-bottom: 1rem;
 }
 
-.overlay-btn {
-  background-color: #b7a57a;
+.overlay-btn{
+  display: inline-block;
+  background-color: #b7a57a;   /* UW gold */
   color: #111;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: filter .2s ease, background-color .2s ease;
 }
-
-.overlay-btn:hover {
-  background-color: #a48e63;
-}
+.overlay-btn:hover{ filter: brightness(.95); }
