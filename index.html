@@ -1,60 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>YourSite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="assets/styles.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Girum Wanoro</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/main.js" defer></script>
 </head>
+
 <body>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html">YourSite</a>
-
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-
-    <ul id="primary-nav" class="nav-links">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="about.html">About / Lab 1</a></li>
-      <li><a href="resources.html">Resources</a></li>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a class="active" href="#section1">Section 1</a></li>
+      <li><a href="#section2">Section 2</a></li>
+      <li><a href="#video-section">Video</a></li>
     </ul>
   </nav>
-</header>
 
-<main>
-  <!-- HERO: shows a video if present; otherwise falls back to a gradient -->
-  <section class="video-bg" aria-label="Intro">
-    <!-- If you don't have a video yet, keep this <video> but it will hide behind the gradient.
-         Add files at assets/media/hero.webm and hero.mp4 when ready. -->
-    <video class="bg-video" autoplay muted loop playsinline poster="assets/media/images/hero-poster.jpg">
-      <source src="assets/media/hero.webm" type="video/webm">
-      <source src="assets/media/hero.mp4" type="video/mp4">
-    </video>
+  <!-- Header section with your background image from CSS -->
+  <header>
+    <h1>Welcome to Girum Wanoro’s Page</h1>
+  </header>
 
-    <div class="overlay-content">
-      <h1>Welcome!</h1>
-      <p>A responsive site converted from my Lab 1 wiki.</p>
-      <a class="overlay-btn" href="#more">Learn More</a>
+  <!-- Section 1 -->
+  <section id="section1">
+    <h2>About Me</h2>
+    <p>
+      My name is <strong>Girum Wanoro</strong>. I was born and raised in Ethiopia and moved to the
+      United States when I was 12 years old. I’m currently a student at the University of Washington,
+      majoring in <strong>Geography with Data Science</strong> and minoring in <strong>Business Administration</strong>.
+      Growing up in an immigrant family taught me resilience, independence, and the importance of community.
+    </p>
+    <ul>
+      <li>First-generation college student</li>
+      <li>Fluent in three languages</li>
+      <li>Passionate about data, culture, and community empowerment</li>
+    </ul>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="section2">
+    <h2>My Interests & Goals</h2>
+    <p>
+      I’ve always been curious about how people and places connect. My academic work in geography
+      has helped me understand how data can tell stories about human experience — from mapping
+      migration to studying social patterns. In the future, I hope to use data science to create
+      positive change in underserved communities and promote equity through education and access.
+    </p>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-section">
+    <h2>My Journey So Far</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/1vrEljMfXYo" 
+        title="My Story Video"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
     </div>
   </section>
 
-  <section id="more" class="container prose" style="min-height:50vh">
-    <h2>Overview</h2>
-    <p>Replace this with a short summary pulled from your Lab 1 wiki.</p>
-  </section>
-</main>
+  <!-- Footer -->
+  <footer>
+    <p>Website by Girum Wanoro</p>
+  </footer>
 
-<footer class="site-footer">
-  <div class="container">
-    <small>© <span id="year"></span> Your Name • GEOG 482</small>
-  </div>
-</footer>
-
-<button id="backTop" aria-label="Back to top">↑ Top</button>
-
-<script src="assets/script.js"></script>
 </body>
 </html>
