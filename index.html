@@ -3,64 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YourSite</title>
+  <title>Girum Wanoro • GEOG 328</title>
+
+  <!-- CSS + JS -->
   <link rel="stylesheet" href="css/main.css" />
   <script src="js/main.js" defer></script>
+
+  <!-- Favicons are optional -->
 </head>
 <body>
 
-  <!-- Top bar -->
+  <!-- ===== Sticky Top Bar / Nav ===== -->
   <header class="site-header">
     <nav class="nav" aria-label="Main">
       <a class="brand" href="index.html">YourSite</a>
 
+      <!-- Hamburger (works on small screens via JS) -->
       <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
 
       <ul class="nav-links" id="primary-nav">
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About / Lab 1</a></li>
         <li><a href="resources.html">Resources</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero (white, centered button) -->
+  <!-- ===== Hero (white space + Learn More button) ===== -->
   <main>
     <section class="hero">
       <a class="overlay-btn" href="#about">Learn More</a>
     </section>
 
-    <!-- About teaser (same page) -->
-   <section id="about" class="container prose">
-  <h2>About Girum</h2>
-  <p>
-    This page is about me — <strong>Girum Wanoro</strong>. I’m a student at the University of Washington studying
-    <strong>Geography with Data Science</strong> and minoring in Business Administration. I created this website as
-    part of <strong>GEOG 328</strong> to showcase what I learned about building a responsive webpage using HTML, CSS, and JavaScript.
-  </p>
+    <!-- ===== About Girum (on the homepage) ===== -->
+    <section id="about" class="container prose">
+      <h2>About Girum</h2>
 
-  <p>
-    I was born and raised in Ethiopia and moved to the United States at 12 years old. My journey has shaped the way I
-    approach learning and creativity — combining technical skills with cultural understanding. Through this class,
-    I’ve learned how design and data visualization can help communicate ideas in clear and engaging ways.
-  </p>
+      <!-- Your photo -->
+      <img
+        src="img/IMG_7295.jpeg"
+        alt="Girum overlooking the Seattle skyline at sunset"
+        style="display:block; margin:1.5rem auto; max-width:500px; width:100%; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.25);"
+      />
 
-  <p>
-    This website reflects who I am — curious, creative, and always learning something new.
-  </p>
-</section>
+      <p>
+        This page is about me — <strong>Girum Wanoro</strong>. I’m a student at the
+        <strong>University of Washington</strong> studying <strong>Geography with Data Science</strong>
+        and minoring in <strong>Business Administration</strong>. I built this site for
+        <strong>GEOG 328</strong> to convert my Lab 1 wiki into a responsive website using HTML, CSS, and JavaScript.
+      </p>
+
+      <p>
+        I was born and raised in Ethiopia and moved to the United States at age 12. That journey shaped the way I learn
+        and create — blending technical skills with cultural understanding. I’m interested in using data and design to tell
+        stories about people, place, and community.
+      </p>
+
+      <p>
+        Explore the pages above to see my notes, resources, and what I’ve been building this quarter.
+      </p>
+    </section>
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> YourSite</small>
+      <small>© <span id="year"></span> YourSite • GEOG 328</small>
     </div>
   </footer>
 
-  <!-- Back to top -->
+  <!-- Back-to-top button (JS handles show/hide + smooth scroll) -->
   <button id="backTop" aria-label="Back to top">↑ Top</button>
+
 </body>
 </html>
 
