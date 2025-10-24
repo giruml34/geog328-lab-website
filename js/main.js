@@ -19,7 +19,7 @@ if (backTop) {
   });
 }
 
-// Smooth scroll for in-page links (e.g., Learn More)
+// Smooth scroll for in-page anchors (e.g., “Learn More”)
 document.addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="#"]');
   if (!a) return;
@@ -34,4 +34,3 @@ document.addEventListener('click', (e) => {
 // Footer year
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
-
