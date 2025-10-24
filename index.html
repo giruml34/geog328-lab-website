@@ -4,11 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YourSite</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <script src="assets/script.js" defer></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
+  <!-- Top bar -->
   <header class="site-header">
     <nav class="nav" aria-label="Main">
       <a class="brand" href="index.html">YourSite</a>
@@ -19,29 +20,33 @@
 
       <ul class="nav-links" id="primary-nav">
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="#about">About / Lab 1</a></li>
-        <li><a href="#resources">Resources</a></li>
+        <li><a href="about.html">About / Lab 1</a></li>
+        <li><a href="resources.html">Resources</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero (white, centered button) -->
   <main>
     <section class="hero">
       <a class="overlay-btn" href="#about">Learn More</a>
     </section>
-    
+
+    <!-- About teaser (same page) -->
     <section id="about" class="container prose">
       <h2>About / Lab 1</h2>
-      <p>Put your Lab 1 → website conversion notes here.</p>
-    </section>
-
-    <section id="resources" class="container prose">
-      <h2>Resources</h2>
-      <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-      </ul>
+      <p>Short intro to what this site is and how you converted your Lab 1 wiki into a website.</p>
     </section>
   </main>
 
-  <f
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> YourSite</small>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backTop" aria-label="Back to top">↑ Top</button>
+</body>
+</html>
+
