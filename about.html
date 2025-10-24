@@ -1,23 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About / Lab 1</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <header class="site-header">
-    <nav class="nav" aria-label="Main">
+  <!-- Navigation -->
+  <header>
+    <nav>
       <a class="brand" href="index.html">YourSite</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-
-      <ul class="nav-links" id="primary-nav">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="about.html">About / Lab 1</a></li>
         <li><a href="resources.html">Resources</a></li>
@@ -25,29 +21,30 @@
     </nav>
   </header>
 
-  <main class="container prose">
-    <h1>Lab 1 → Website Conversion</h1>
-    <p>Replace this with your Lab 1 content (summary, steps, screenshots, etc.).</p>
+  <!-- Page Content -->
+  <main class="container">
+    <h1>About / Lab 1</h1>
+    <p>
+      This page explains how I converted my Lab 1 wiki into a website using HTML, CSS, and JavaScript.
+      It’s a simple layout with a navigation bar, a clean design, and a back-to-top button.
+    </p>
 
     <h2>Summary Table</h2>
     <table>
-      <thead>
-        <tr><th>Section</th><th>Key Idea</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Setup</td><td>Create repo + Pages</td><td>index.html at root</td></tr>
-        <tr><td>Design</td><td>Sticky nav + hero</td><td>UW purple/gold theme</td></tr>
-        <tr><td>Enhance</td><td>Back-to-top</td><td>Smooth scroll</td></tr>
-      </tbody>
+      <tr><th>Step</th><th>Description</th></tr>
+      <tr><td>1</td><td>Created a new GitHub repository and added index.html</td></tr>
+      <tr><td>2</td><td>Styled the site with UW purple and gold colors</td></tr>
+      <tr><td>3</td><td>Added navigation, images, and a back-to-top button</td></tr>
     </table>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> YourSite</small>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> YourSite • GEOG 328</p>
   </footer>
 
+  <!-- Back to top button -->
   <button id="backTop" aria-label="Back to top">↑ Top</button>
+
 </body>
 </html>
