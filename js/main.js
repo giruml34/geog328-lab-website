@@ -24,3 +24,18 @@ backTop.addEventListener('click', () => {
 // Auto year update
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+// --- Back to Top Button Functionality ---
+const backTop = document.getElementById('backTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backTop.style.display = 'inline-block';
+  } else {
+    backTop.style.display = 'none';
+  }
+});
+
+backTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
