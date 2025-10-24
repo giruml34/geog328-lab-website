@@ -1,35 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Lab 1 → Website Conversion</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="assets/styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About / Lab 1</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="index.html">My Lab Site</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-    <ul id="primary-nav" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="about.html">Lab 1 → Site</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
-  </nav>
-</header>
 
-<main class="container prose">
-  <h1>Converting My Lab 1 Wiki</h1>
-  <p>Paste/clean up your Lab 1 markdown content here as HTML paragraphs, lists, and images. You can also add a collapsible FAQ or cards if you want more custom elements.</p>
-</main>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">YourSite</a>
 
-<footer class="site-footer">
-  <div class="container"><small>© <span id="year"></span> Your Name • GEOG 482</small></div>
-</footer>
-<button id="backTop" aria-label="Back to top">↑ Top</button>
-<script src="assets/script.js"></script>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About / Lab 1</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container prose">
+    <h1>Lab 1 → Website Conversion</h1>
+    <p>Replace this with your Lab 1 content (summary, steps, screenshots, etc.).</p>
+
+    <h2>Summary Table</h2>
+    <table>
+      <thead>
+        <tr><th>Section</th><th>Key Idea</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Setup</td><td>Create repo + Pages</td><td>index.html at root</td></tr>
+        <tr><td>Design</td><td>Sticky nav + hero</td><td>UW purple/gold theme</td></tr>
+        <tr><td>Enhance</td><td>Back-to-top</td><td>Smooth scroll</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> YourSite</small>
+    </div>
+  </footer>
+
+  <button id="backTop" aria-label="Back to top">↑ Top</button>
 </body>
 </html>
