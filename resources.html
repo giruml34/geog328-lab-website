@@ -1,20 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resources</title>
   <link rel="stylesheet" href="css/main.css" />
-  <script defer src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+
   <header class="site-header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Main">
       <a class="brand" href="index.html">YourSite</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+
+      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
-      <ul class="nav-links" id="navLinks">
+
+      <ul class="nav-links" id="primary-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About / Lab 1</a></li>
         <li><a class="active" href="resources.html">Resources</a></li>
@@ -23,16 +26,26 @@
   </header>
 
   <main class="container prose">
-    <h1>Resources & Citations</h1>
+    <h1>Resources</h1>
     <ul>
-      <li>Add your readings, datasets, and attributions here.</li>
+      <li><a href="https://www.w3schools.com/howto/" target="_blank" rel="noopener">W3Schools How-To</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener">MDN Web Docs</a></li>
+      <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></li>
     </ul>
+
+    <h2>Sample Image</h2>
+    <p>Drop an image in <code>img/</code> and point to it here if you want.</p>
+    <!-- <img src="img/sample.jpg" alt="Sample"> -->
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Your Name</p>
+      <small>© <span id="year"></span> YourSite</small>
     </div>
   </footer>
+
+  <button id="backTop" aria-label="Back to top">↑ Top</button>
 </body>
 </html>
+>
+
